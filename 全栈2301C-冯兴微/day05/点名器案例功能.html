@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url(./R-C.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .box {
+
+            text-align: center;
+            color: #fff;
+            margin-top: 100px;
+        }
+
+
+        .one {
+            color: #fff;
+            width: 500px;
+            height: 100px;
+            margin-left: 100px;
+            margin-top: 20px;
+
+        }
+
+        .names {
+            width: 100px;
+            height: 30px;
+            float: left;
+            margin-left: 10px;
+            margin-top: 10px;
+            text-align: center;
+            line-height: 30px;
+            font-size: 20px;
+
+            background-image: linear-gradient(to right, #67dfee, #71e899, #e9b0d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+
+
+        }
+
+        .btn {
+            width: 100px;
+            height: 30px;
+            background-color: #7ebd50;
+            color: #fff;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 30px;
+            border: 0;
+
+        }
+
+        .xz {
+
+
+            color: #fff;
+            font-size: 30px;
+            margin-left: 30px;
+            margin-top: 150px;
+            padding-left: 100px;
+
+
+        }
+
+        .an {
+            margin-top: 50px;
+
+        }
+
+        .con {
+            display: flex;
+
+        }
+
+        .input {
+            width: 200px;
+            height: 30px;
+            /* border: 0; */
+            /* background-color: transparent; */
+        }
+
+        .time {
+            color: #fff;
+        }
+
+        .xm {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h1>2301C点名表</h1>
+        <p id="time">时间：</p>
+    </div>
+
+    <div class="con">
+        <div id="names" class="one"></div>
+
+        <div class="xz">
+            天选之人：
+            <div id="xm"></div>
+            <div class="an">
+                <button onclick="dr()" id="an1">单人点名</button>
+                <button onclick="sr()" id="an2">双人点名</button>
+                <button onclick="ns()" id="an3">男生点名</button>
+                <button onclick="men()" id="an4">女生点名</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script>
+    var arr = ['杨晓宇', '陈亚东', '赵中阳', '展立业', '曹昊然', '李媛媛', '王婷婷',
+        '孙建', '杨子乐', '冯士靖', '张秋景', '李炎沛', '裴丽珂', '付少聪', '曹博文',
+        '李超凡', '王凯', '丁卓肖', '余道林', '王志阳', '张清莲', '刘博文', '周天龙',
+        '杨浩淇', '韩锡金']
+
+    var nan = ['杨晓宇', '陈亚东', '赵中阳', '展立业', '曹昊然',
+        '孙建', '杨子乐', '冯士靖', , '李炎沛', , '付少聪', '曹博文',
+        '李超凡', '王凯', '丁卓肖', '余道林', '王志阳', '张清莲', '刘博文', '周天龙',
+        '杨浩淇', '韩锡金']
+
+    var nav = ['李媛媛', '王婷婷', '张秋景', '张梦佳', '冯兴微', '裴丽珂']
+
+    var names = document.getElementById('names')
+    for (let i = 0; i < arr.length; i++) {
+        var one = document.createElement('div')
+        one.innerHTML = arr[i]
+        one.className = 'names'
+        names.appendChild(one)
+    }
+
+    //时间
+    var time = document.getElementById('time')
+    setInterval(gettime, 1000);
+    gettime()
+    function gettime() {
+        var day = new Date()
+        var year = day.getFullYear()
+        var month = day.getMonth() + 1
+        var dat = day.getDate()
+        var hour = day.getHours()
+        var minitue = day.getMinutes()
+        var second = day.getSeconds()
+        month = month < 10 ? 'g' + month : month
+        dat = dat < 10 ? '0' + dat : dat
+        hour = hour < 10 ? '0' + hour : hour
+        minitue = minitue < 10 ? '0' + minitue : minitue
+        second = second < 10 ? '0' + second : second
+        time.innerHTML = year + "-" + month + "-" + dat + " " + hour + ":" + minitue + ":" + second
+    }
+
+
+
+    //单人点名
+    var xm = document.querySelector('#xm')
+    var an1 = document.getElementById('an1')
+
+    function fn() {
+        let index = arr[Math.floor(Math.random() * arr.length)]
+        xm.innerHTML = index
+    }
+    var i
+    function dr() {
+        if (an1.innerHTML == '单人点名') {
+            i = setInterval(() => {
+                fn()
+
+            }, 100)
+            an1.innerHTML = '停止'
+        }
+        else if (an1.innerHTML = '停止') {
+            function fn1() {
+                clearInterval(i)
+            }
+            fn1()
+            an1.innerHTML = '单人点名'
+        }
+
+    }
+
+    //双人点名
+    var an2 = document.getElementById('an2')
+    function fn2() {
+        let index1 = arr[Math.floor(Math.random() * arr.length)]
+        let index2 = arr[Math.floor(Math.random() * arr.length)]
+        index1 != index2
+        xm.innerHTML = index1 + index2
+    }
+    var p
+    function sr() {
+        if (an2.innerHTML == '双人点名') {
+            p = setInterval(() => {
+                fn2()
+
+            }, 100)
+            an2.innerHTML = '停止'
+        }
+        else if (an2.innerHTML = '停止') {
+            function fn3() {
+                clearInterval(p)
+            }
+            fn3()
+            an2.innerHTML = '双人点名'
+        }
+
+    }
+
+    //男生点名
+    
+    function fn4() {
+        let index4 = nan[Math.floor(Math.random() * nan.length)]
+        xm.innerHTML = index4
+    }
+    var u
+    function ns() {
+        if (an3.innerHTML == '男生点名') {
+            u = setInterval(() => {
+                fn4()
+
+            }, 100)
+            an3.innerHTML = '停止'
+        }
+        else if (an3.innerHTML = '停止') {
+            function fn5() {
+                clearInterval(u)
+            }
+            fn5()
+            an3.innerHTML = '男生点名'
+        }
+
+    }
+
+    //女升点名
+    function fn5() {
+        let index5 = nav[Math.floor(Math.random() * nav.length)]
+        xm.innerHTML = index5
+    }
+    var t
+    function men() {
+        if (an4.innerHTML == '女生点名') {
+            t = setInterval(() => {
+                fn5()
+
+            }, 100)
+            an4.innerHTML = '停止'
+        }
+        else if (an4.innerHTML = '停止') {
+            function fn6() {
+                clearInterval(t)
+            }
+            fn6()
+            an4.innerHTML = '女生点名'
+        }
+
+    }
+
+</script>
+
+</html>

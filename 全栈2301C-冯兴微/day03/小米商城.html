@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .header {
+            width: 100%;
+            height: 50px;
+            background-color: black;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .top {
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            color: #ccc;
+            font-size: 13px;
+            list-style: none;
+            line-height: 50px;
+            margin-left: 60px;
+        }
+
+        .rigth {
+            width: 40%;
+            display: flex;
+
+            color: #ccc;
+            font-size: 13px;
+            list-style: none;
+            line-height: 50px;
+            padding-left: 150px;
+            box-sizing: border-box;
+
+        }
+
+        p {
+            padding-left: 10px;
+        }
+
+        .con {
+            width: 100%;
+            display: flex;
+            position: relative;
+            padding-bottom: 20px;
+
+        }
+
+        .img {
+            margin-top: 30px;
+            margin-left: 60px;
+        }
+
+        .good {
+            width: 80%;
+            list-style: none;
+            display: flex;
+            margin-top: 50px;
+            margin-left: 20px;
+        }
+
+        .box {
+            position: absolute;
+            right: 150px;
+            top: 60px;
+        }
+
+        .input {
+            width: 250px;
+            height: 50px;
+            border: 1px solid #ccc;
+            margin-top: 30px;
+            position: relative;
+
+
+        }
+
+        .li {
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .btn {
+            width: 50px;
+            height: 50px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            position: absolute;
+            left: 201px;
+            top: 31px;
+
+        }
+
+        .tp {
+            width: 100%;
+            height: 100%;
+        }
+
+        .one {
+            width: 100%;
+            height: 40px;
+            background-color: #f5f5f5;
+            line-height: 40px;
+
+        }
+
+        .mian {
+            margin-left: 60px;
+        }
+
+        .dui {
+            margin-left: 60px;
+            margin-top: 30px;
+        }
+
+        .box2 {
+            display: flex;
+        }
+
+        .wen {
+            margin-top: 35px;
+            font-size: 20px;
+            color: darkorange;
+        }
+
+        .phone {
+            list-style: none;
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            padding-left: 60px;
+            box-sizing: border-box;
+            padding-top: 20px;
+
+        }
+
+        .ph {
+            width: 18%;
+            height: 200px;
+            border: 1px solid #ccc;
+            text-align: center;
+            line-height: 50px;
+
+
+        }
+
+        .tou {
+            width: 80px;
+            height: 80px;
+            margin-top: 20px;
+        }
+
+        .forted {
+            width: 100%;
+            /* height: 200px; */
+            list-style: none;
+           padding: 0 100px;
+            box-sizing: border-box;
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+          
+            
+        }
+
+        .yu {
+            width: 50px;
+            height: 50px;
+            vertical-align: middle;
+        }
+        .hou{
+            width: 90%;
+            height: 400px;
+            margin-left: 100px;
+        }
+    
+      
+    </style>
+</head>
+
+<body>
+    <!-- 导航 -->
+    <div class="header">
+        <ul class="top">
+            <li>小米官网</li>
+            <li>小米商城</li>
+            <li>MUI</li>
+            <li>loT</li>
+            <li>云服务</li>
+            <li>天行教科</li>
+            <li>有品</li>
+            <li>小爱开放平台</li>
+            <li>资质证照</li>
+            <li>协议规则</li>
+            <li>下载APP</li>
+            <li>SelecLLcaion</li>
+        </ul>
+
+        <div class="rigth">
+            <p>登录</p>
+            <p>注册</p>
+            <p>消息通知</p>
+            <p>购物车（0）</p>
+        </div>
+    </div>
+   <div class="ban">
+     <!-- logio -->
+     <div class="con">
+        <img src="./logo.png" alt="" class="img">
+        <ul class="good">
+            <li class="li">全部商品分类</li>
+            <li class="li">Xiaomi手机</li>
+            <li class="li">Redmi手机</li>
+            <li class="li">电视</li>
+            <li class="li">笔记本</li>
+            <li class="li">平板</li>
+            <li class="li">家电</li>
+            <li class="li">路由器</li>
+            <li class="li">服务中心</li>
+            <li class="li">社区</li>
+        </ul>
+    </div>
+    <!--搜索  -->
+    <div class="box">
+        <input type="text" class="input">
+        <button class="btn"><img src="./ss.png" alt="" class="tp"></button>
+    </div>
+
+    <div class="one">
+        <span class="mian">首页/全部商品分类</span>
+    </div>
+
+    <!-- 内容 -->
+    <div class="nr">
+        <div class="box2"> <img src="./33.png" alt="" class="dui">
+            <p class="wen">手机</p>
+        </div>
+        <ul class="phone">
+            <li class="ph">
+                <img src="./55.png" alt="" class="tou">
+                <p>Xiaomi MIX系列</p>
+            </li>
+            <li class="ph">
+                <img src="./44.png" alt="" class="tou">
+                <p>Xiaomi MIX系列</p>
+            </li>
+            <li class="ph">
+                <img src="./66.png" alt="" class="tou">
+                <p>Xiaomi MIX系列</p>
+            </li>
+            <li class="ph">
+                <img src="./77.png" alt="" class="tou">
+                <p>Xiaomi MIX系列</p>
+            </li>
+            <li class="ph">
+                <img src="./55.png" alt="" class="tou">
+                <p>Xiaomi MIX系列</p>
+            </li>
+            <li class="ph">
+                <img src="./66.png" alt="" class="tou">
+                <p>Xiaomi MIX系列</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="forted">
+        <div>
+          <img src="./aa.png" alt="" class="yu">
+          <span>预约维修服务</span>
+        </div>
+        <div>
+            <img src="./bb.png" alt="" class="yu">
+            <span>7天无理由退货</span>
+          </div>
+          <div>
+            <img src="./ee.png" alt="" class="yu">
+            <span>15天免费换货</span>
+          </div>
+          <div>
+            <img src="./dd.png" alt="" class="yu">
+            <span>满69元包邮</span>
+          </div>
+          <div>
+            <img src="./dd.png" alt="" class="yu">
+            <span>1100余家售后网点</span>
+          </div>
+    </div>
+
+  <div>
+     <img src="./kk.png" alt="" class="hou">
+  </div>
+
+
+   </div>
+</body>
+
+</html>
